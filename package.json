@@ -1,0 +1,18 @@
+{
+  "name": "sqlserver_idbms",
+  "version": "1.0.0",
+  "description": "To Connect to microsoft azure dataabase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "sandeep",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "serve-static": "^1.12.1",
+    "tedious": "^2.0.0"
+  }
+}

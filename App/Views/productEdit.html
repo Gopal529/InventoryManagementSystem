@@ -1,0 +1,47 @@
+<button type="button" class="close" ng-click="cancel();">
+	<i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+</button>
+
+<div class="modal-header">
+	<h3 class="modal-title">Edit product [ID: {{product.MODEL_NUMBER}}]</h3>
+</div>
+
+<div class="modal-body">
+
+	<form name="product_form" class="form-horizontal" role="form" novalidate>
+
+
+		<div class="form-group">
+			<label class="control-label col-sm-2">Name:</label>
+			<div class="col-md-8">
+				<input type="text" name="name" class="form-control" placeholder="NAME" ng-model="product.NAME" ng-disabled="product.id" focus/>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2">Price:</label>
+			<div class="col-md-8">
+				<input type="text" name="price" class="form-control" placeholder="PRICE" ng-model="product.MSRP" only-numbers/>
+				<small class="errorMessage" ng-show="product_form.price.$dirty && product_form.price.$invalid"> Enter the price.</small>
+			</div>
+
+		</div>
+
+
+		<div class="form-group">
+			<label class="control-label col-sm-2">Stock:</label>
+			<div class="col-md-8">
+				<input type="text" name="stock" class="form-control" placeholder="STOCK" ng-model="product.QUANTITY" only-numbers/>
+				<small class="errorMessage" ng-show="product_form.stock.$dirty && product_form.stock.$invalid"> Enter the available stock.</small>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+				<button type="submit" class="btn btn-info" ng-click="UpdateItem(product)">Update</button>
+			</div>
+		</div>
+		
+	</form>
+</div>

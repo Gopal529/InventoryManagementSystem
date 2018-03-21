@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<div class="container">
+
+	<div class="row">
+
+			<div class="col-sm-6  col-sm-offset-3">
+				<div id="imaginary_container">
+					<div class="input-group stylish-input-group">
+						<input type="text" class="form-control" ng-model="SearchText" placeholder="Search" required>
+						<span class="input-group-addon">
+                        <button type="submit" ng-click="Search()">
+                            <span class="fa fa-search"></span>
+						</button>
+						</span>
+					</div>
+				</div>
+			</div>
+	</div>
+
+
+</div>
+    <br>
+
+	<div class="container">
+
+		<div class="row justify-content-md-center" >
+
+		<table class="table table-bordered" >
+			<tr ng-repeat="item in items" ng-if="items" style="background-color:azure;">
+				<td>
+
+
+						<div class="col-md-2" style="height: 130px;">
+							<img src={{item.mediumImage}}  style='height: 100%; width: 100%; object-fit: contain'>
+						</div>
+
+						<div class="col-md-4"  style="height:130px;overflow: hidden;">
+							<strong><p style="word-wrap: break-word;">{{item.name}}</p>  </strong>
+
+							<div>
+								<img style="display: inline-block" src="{{item.customerRatingImage}}">
+								<p style="display: inline-block; margin-right: 100px">{{item.customerRating}}</p>
+								<br>
+								<h5><strong>${{item.salePrice}}</strong></h5>
+							</div>
+						</div>
+
+						<div class="col-md-1" style="height: 130px;">
+							<input type="button" class="btn  btn-success" value="select" style="margin-top: 50%" ng-click="EditItem(items[$index])">
+						</div>
+
+
+
+				</td>
+
+			</tr>
+
+		</table>
+
+	</div>
+	</div>
+
+
+
+</body>
+
+</html>

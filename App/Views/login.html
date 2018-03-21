@@ -1,0 +1,34 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">UserName</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" ng-model = "Email"  placeholder="Enter E-mail" class="form-control input-md">
+    
+  </div>
+</div>
+    
+    <!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwordinput">Password</label>
+  <div class="col-md-4">
+    <input id="passwordinput" name="passwordinput" type="password" ng-model = "Password"  placeholder="Enter Password" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Login"></label>
+  <div class="col-md-8">
+    <button id="Login" name="Login" class="btn btn-success" ng-click="login()" >Login</button>
+    <button id="Register" name="Register" class="btn btn-default" ng-click = "Navigate('/Register')" >Register</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

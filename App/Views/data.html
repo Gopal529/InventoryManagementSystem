@@ -1,0 +1,38 @@
+<div class="container">
+
+	<div class="row">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="email">Users:</label>
+				<select class="form-control" ng-model="SelectedName" ng-change="GetOrders(SelectedName.ID)" ng-options="x.USERNAME for x in Name">
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="email">Orders:</label>
+				<select ng-model="OrderValue" ng-options="x.ID for x in Orders" />
+			</div>
+			<button class="btn btn-info" ng-click="GetResults(OrderValue.ID)">Get Orders Data</button>
+		</form>
+	</div>
+	<div class="row" style="height: 150px;" ng-if="Results">
+		<h5 class="success">Total Order Cost = <strong>$ {{Results[0].AMOUNT}}</strong> </h5>
+		<table class="table table-striped">
+			<th>Name</th>
+			<th>Cost</th>
+			<th>Quantity</th>
+			<tr ng-repeat="item in Results" animate-on-change='item.NAME + item.MSRP + item.QUANTITY ' ng-animate=" 'animate'">
+				<td>{{item.NAME}}</td>
+				<td>{{item.MSRP}}</td>
+				<td>{{item.QUANTITY}}</td>
+			</tr>
+		</table>
+	</div>
+	<hr>
+	<div class="row">
+		<h4>Number of Orders Placed by Different Users </h4>
+		<button class="btn btn-success" ng-click="GetData()">Get Data</button>
+		<div id="piechart" style="width: 600px; height: 300px;"></div>
+	</div>
+	<hr>
+
+</div>

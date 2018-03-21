@@ -1,0 +1,131 @@
+<!doctype html>
+<html ng-app="SplitWise">
+
+<head>
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/toastr.min.css">
+
+</head>
+
+<style type="text/css">
+	.left {
+		width: 70%;
+		float: left;
+		padding-left: 1cm;
+	}
+	
+	.right {
+		width: 30%;
+		float: left;
+		padding-top: 2cm;
+	}
+	
+	.center {
+		margin: 0 auto;
+		width: 80%;
+	}
+	
+	.input {
+		width: 200px;
+		vertical-align: middle;
+	}
+	
+	.stylish-input-group .input-group-addon {
+		background: white !important;
+	}
+	
+	.stylish-input-group .form-control {
+		border-right: 0;
+		box-shadow: 0 0 0;
+		border-color: #ccc;
+	}
+	
+	.stylish-input-group button {
+		border: 0;
+		background: transparent;
+	}
+	
+	.center-block {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.scroll {  
+    height: 450px !important;
+    overflow: scroll;
+}
+</style>
+
+<body>
+
+
+
+	<nav class="navbar navbar-default" ng-controller="MenuController">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">Inventory Management System</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active" ng-click="Naviagte('/Home')"><a>Home</a></li>
+				<li><a  href="#/Charts">View Orders</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li ng-click="Naviagte('/Orders')"><a href=""><span class="fa fa-shopping-cart"></span>&nbsp;View Shopping Cart</a></li>
+			</ul>
+		</div>
+	</nav>
+
+<hr>
+	
+	<div  class="container-fluid" ng-view>
+
+
+	</div>
+
+
+
+	<script src="script/angular.js"></script>
+	<script src="script/angular-route.js"></script>
+	<script src="script/angular-resource.js"></script>
+	<script src="script/angular-animate.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+	<script src="script/ui-bootstrap-tpls-0.11.2.min.js"></script>
+	<script src="script/bootstrap.min.js"></script>
+	<script src="script/underscore.min.js"></script>
+	<script src="script/ie10-viewport-bug-workaround.js"></script>
+	<script src="script/toastr.min.js"></script>
+
+
+	<script src="App/Controllers/App.js"></script>
+	<script src="App/Controllers/SearchProductsController.js"></script>
+	<script src="App/Controllers/EditItemController.js"></script>
+	<script src="App/Controllers/DBSearchController.js"></script>
+	<script src="App/Controllers/productsController.js"></script>
+	<script src="App/Controllers/productEditCtrl.js"></script>
+	<script src="App/Controllers/OrderController.js"></script>
+	<script src="App/Controllers/MenuController.js"></script>
+	<script src="App/Controllers/LoginController.js"></script>
+	<script src="App/Controllers/RegisterController.js"></script>
+	<script src="App/Controllers/PaymentsController.js"></script>
+	<script src="App/Controllers/DataController.js"></script>
+
+	<script src="App/Services/WalmartFactory.js"></script>
+	<script src="App/Services/EditItemFactory.js"></script>
+	<script src="App/Services/DataFactory.js"></script>
+
+
+
+
+
+</body>
+
+</html>

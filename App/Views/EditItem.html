@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+	<button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o" style="margin:10px;color:blue;"></i>
+    </button>
+	<div class="modal-header">
+	<h4>{{Item.Name}}</h4>
+	</div>
+	<div class="modal-body ">
+
+		<div class="container" style="padding-top:2px; padding-bottom: 2px;">
+			
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="col-md-3">
+						<img src="{{Item.Image}}" style='height: 100%; width: 100%; object-fit: contain; vertical-align: middle'>
+					</div>
+
+
+					<div class="col-md-9">
+						<div class="form-group">
+							<label>Item Name</label>
+							<input class="form-control" type="text" placeholder="Item name" ng-model="Item.Name">
+						</div>
+						<div class="form-group">
+							<label>Model Number</label>
+							<input class="form-control" type="text" placeholder="Model number" ng-model="Item.ModelNumber">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6">
+
+
+					<div class="form-group">
+						<label>Sale Price</label>
+						<input class="form-control" type="text" placeholder="Sale price" ng-model="Item.SalePrice" required>
+					</div>
+
+
+					<div class="form-group">
+						<label>MSRP</label>
+						<input class="form-control" type="text" placeholder="MSRP" ng-model="Item.MSRP" required>
+					</div>
+
+				</div>
+
+			</div>
+			
+			<div class="row">
+				<div class=" col-md-6 form-inline">
+
+
+					<div class="form-group ">
+						<label>UPC:</label>
+						<input type="text" class="form-control" placeholder="UPC" ng-model="Item.UPC">
+					</div>
+
+					<div class="form-group">
+						<label>Quantity:</label>
+						<input type="number" class="form-control" placeholder="Quantity" ng-model="Item.Quantity" required>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" style="margin-top:30px">
+				<div class="col-md-6">
+					<input type="button" class="btn btn-success" ng-click="RegisterItem()" value="Add Item" style="display: block; margin: 0 auto;">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
